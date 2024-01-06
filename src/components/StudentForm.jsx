@@ -29,11 +29,11 @@ export default function StudentForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="w-[900px] border-2 mx-auto shadow-lg rounded-lg overflow-hidden flex">
+    <form onSubmit={handleSubmit(onSubmit)} className="w-[90%] md:w-[900px] border-2 mx-auto shadow-lg rounded-lg overflow-hidden flex flex-col md:flex-row">
       {/* ========= Left side ========= */}
-      <div className="bg-white w-3/5 p-8">
-        <h1 className="font-bold text-2xl tracking-wide">Registration & Booking at GoStudent</h1>
-        <p className="text-center text-[#2d3842] text-lg tracking-wide mb-8">The leading platform for online tutoring.</p>
+      <div className="bg-white w-full md:w-3/5 p-8">
+        <h1 className="font-bold text-lg text-center md:text-2xl tracking-wide">Registration & Booking at GoStudent</h1>
+        <p className="text-center text-[#2d3842] text-sm md:text-lg tracking-wide mb-8">The leading platform for online tutoring.</p>
 
         {/* ======== Student's phone number ======== */}
         <CustomPhoneInput control={control} prefer="student's" name="student-phone" ref={studentPhone} />
@@ -94,7 +94,7 @@ export default function StudentForm() {
         {/* ========= Submit ========= */}
         <button className='bg-[#24a7f2] capitalize text-white w-full py-4 font-semibold mt-6 rounded'>{isSubmitting ? "Loading..." : "order now"}</button>
 
-        <p className='uppercase text-sm font-medium text-gray-500 mt-auto text-center'>95% satisfaction rate</p>
+        <p className='uppercase text-sm font-medium text-gray-500 mt-3 md:mt-auto text-center'>95% satisfaction rate</p>
       </div>
 
     </form>

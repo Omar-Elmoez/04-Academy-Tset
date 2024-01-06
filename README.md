@@ -9,10 +9,7 @@ This project is the order's page for the GoStudent platform, designed to provide
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
 - [Contributing](#contributing)
-- [Credits](#credits)
-- [License](#license)
 
 ## Introduction
 
@@ -20,10 +17,9 @@ The GoStudent order's page is a React-based application that allows for efficien
 
 ## Features
 
-- View and manage student orders
-- Real-time updates on order status
+- Registration and Booking at GoStudent platform
+- Fully dynamic form.
 - Responsive design for desktop and mobile devices
-- Secure authentication and authorization
 
 ## Getting Started
 
@@ -38,11 +34,6 @@ To get a local copy up and running, follow these simple steps.
 1. Clone the repository
 2. Install NPM packages
 
-## Usage
-
-To start the application, run the following command:
-
-This will run the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Contributing
 
@@ -54,10 +45,3 @@ Contributions are what make the open-source community such an amazing place to l
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Credits
-
-List your team members and their GitHub profiles, any third-party libraries or assets that you used, and any other acknowledgments.
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
