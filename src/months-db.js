@@ -1,0 +1,50 @@
+export default [
+  {
+    duration: "6 Months",
+    reguralPrice: "29.60$",
+    yourPrice: "25.60$",
+    discount: "-9.50$",
+    totalPrice: "192.10$",
+    setupFee: "0.00$",
+  },
+  {
+    duration: "9 Months",
+    reguralPrice: "38.80$",
+    yourPrice: "35.60$",
+    discount: "-7.50$",
+    totalPrice: "272.10$",
+    setupFee: "0.00$",
+  },
+  {
+    duration: "12 Months",
+    reguralPrice: "52.40$",
+    yourPrice: "49.60$",
+    discount: "-10.50$",
+    totalPrice: "365.10$",
+    setupFee: "0.00$",
+  },
+  {
+    duration: "18 Months",
+    reguralPrice: "64.40$",
+    yourPrice: "63.60$",
+    discount: "-12.50$",
+    totalPrice: "472.10$",
+    setupFee: "0.00$",
+  },
+  {
+    duration: "24 Months",
+    reguralPrice: "74.40$",
+    yourPrice: "72.40$",
+    discount: "-14.50$",
+    totalPrice: "672.10$",
+    setupFee: "0.00$",
+  },
+  {
+    duration: "36 Months",
+    reguralPrice: "97.40$",
+    yourPrice: "95.40$",
+    discount: "-15.50$",
+    totalPrice: "1456.10$",
+    setupFee: "0.00$",
+  }
+]

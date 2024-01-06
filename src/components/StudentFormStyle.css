@@ -1,0 +1,26 @@
+.react-tel-input .flag-dropdown {
+  background-color: transparent;
+  border: none ;
+}
+
+.react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus {
+  background-color: transparent;
+}
+
+.react-tel-input .selected-flag .arrow {
+  left: 65px;
+  border-top: 4px solid transparent;
+}
+
+.react-tel-input .form-control {
+  padding-left: 35px;
+  background-color: #f5f7f9;
+  border: none;
+  height: 0;
+  width: 100%;
+  padding-block: 25px;
+}
+
+.react-tel-input .selected-flag {
+  width: 80px;
+}
