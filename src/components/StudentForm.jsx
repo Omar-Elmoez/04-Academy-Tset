@@ -92,6 +92,14 @@ export default function StudentForm() {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                   message: "Invalid email format",
                 },
+                validate: {
+                  notAdmin: (value) => {
+                    return (
+                      value !== "admin@gmail.com" ||
+                      "You are not allowed to use this email address"
+                    );
+                  },
+                },
               }),
             }}
           />
@@ -162,7 +170,6 @@ export default function StudentForm() {
           {/* ======== Monthly sessions ======== */}
           <CustomSelect
             className="mt-6 text-gray-400"
-            // name="monthly-sessions"
             options={["3 Sessions", "5 Sessions", "7 Sessions", "8 Sessions"]}
             chosen="8 Sessions"
             register={{
