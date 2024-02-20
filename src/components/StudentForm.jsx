@@ -68,9 +68,7 @@ export default function StudentForm() {
             name="student-phone"
             ref={studentPhone}
           />
-          {errors["student-phone"] && (
-            <p className="error-message">{errors["student-phone"].message}</p>
-          )}
+          <p className="error-message">{errors["student-phone"]?.message}</p>
 
           {/* ======== parent's phone number ======== */}
           <CustomPhoneInput
@@ -79,41 +77,37 @@ export default function StudentForm() {
             name="parent-phone"
             ref={parentPhone}
           />
-          {errors["parent-phone"] && (
-            <p className="error-message">{errors["parent-phone"].message}</p>
-          )}
+          <p className="error-message">{errors["parent-phone"]?.message}</p>
 
           {/* ======== Contact email ======== */}
           <CustomInput
             label="contact email address"
             type="email"
             id="email"
-            // name="contact-email"
             prefer="parent's"
             register={{
               ...register("contact-email", {
                 required: "You must provide an email address",
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: "Invalid email format",
+                },
               }),
             }}
           />
-          {errors["contact-email"] && (
-            <p className="error-message">{errors["contact-email"].message}</p>
-          )}
+          <p className="error-message">{errors["contact-email"]?.message}</p>
 
           {/* ======== Contact name ======== */}
           <CustomInput
             label="contact name"
             id="contact-name"
-            // name="contact-name"
             register={{
               ...register("contact-name", {
                 required: "You must provide a contact name",
               }),
             }}
           />
-          {errors["contact name"] && (
-            <p className="error-message">{errors["contact name"].message}</p>
-          )}
+          <p className="error-message">{errors["contact name"]?.message}</p>
 
           {/* ======== Billing address ======== */}
           <Row>
@@ -129,17 +123,14 @@ export default function StudentForm() {
                 }}
                 placeholder="Address"
               />
-              {errors["billing-address"] && (
-                <p className="error-message">
-                  {errors["billing-address"].message}
-                </p>
-              )}
+              <p className="error-message">
+                {errors["billing-address"]?.message}
+              </p>
             </div>
 
             <CustomInput
-              // id="nr"
+              id="nr"
               className={`w-1/4 ${errors["billing-address"] ? "mb-6" : ""}`}
-              // name="nr"
               register={{ ...register("nr") }}
               placeholder="NR"
             />
@@ -148,20 +139,17 @@ export default function StudentForm() {
           <Row className="mt-6">
             <CustomInput
               id="postal-code"
-              // name="postal-code"
               register={{ ...register("postal-code") }}
               placeholder="Postal-code"
             />
             <CustomInput
               id="city"
-              // name="city"
               register={{ ...register("city") }}
               placeholder="City"
             />
             <CustomSelect
               placeholder="Country"
               className="w-1/3 text-gray-400"
-              // name="country"
               options={["country1", "country2", "country3"]}
               register={{
                 ...register("country", {
@@ -191,9 +179,7 @@ export default function StudentForm() {
             cardHolderRegister={{ ...register("card-holder") }}
             cardNumberRegister={{ ...register("card-number") }}
           />
-          {errors["payment-method"] && (
-            <p className="error-message">{errors["payment-method"].message}</p>
-          )}
+          <p className="error-message">{errors["payment-method"]?.message}</p>
         </div>
 
         {/* ========= Right side ========= */}
@@ -207,11 +193,7 @@ export default function StudentForm() {
             sessions={watch("monthly-sessions")}
             advancePayRegister={{ ...register("advance-pay") }}
           />
-          {errors["number-of-months"] && (
-            <p className="error-message">
-              {errors["number-of-months"].message}
-            </p>
-          )}
+          <p className="error-message">{errors["number-of-months"]?.message}</p>
 
           {/* ========= Terms & conditions ========= */}
           <div className="flex gap-2 items-start mt-6">
@@ -230,9 +212,7 @@ export default function StudentForm() {
               well as the circumstances that lead to a repeal of the same.
             </label>
           </div>
-          {errors["terms"] && (
-            <p className="error-message">{errors["terms"].message}</p>
-          )}
+          <p className="error-message">{errors["terms"]?.message}</p>
 
           {/* ========= Submit ========= */}
           <button className="bg-[#24a7f2] capitalize text-white w-full py-4 font-semibold mt-6 rounded">
