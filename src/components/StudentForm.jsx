@@ -137,7 +137,7 @@ export default function StudentForm() {
 
           <CustomInput
             id="nr"
-            className="w-1/4 mb-6"
+            className={`w-1/4 ${errors["billing-address"] ? "mb-6" : "" }`}
             name="nr"
             register={{ ...register("nr") }}
             placeholder="NR"
