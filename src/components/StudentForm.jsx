@@ -43,6 +43,7 @@ export default function StudentForm() {
 
     // Mock a server
     await new Promise((resolve) => setTimeout(resolve, 1000));
+    console.log(data);
     reset();
   }
 
@@ -86,7 +87,7 @@ export default function StudentForm() {
             id="email"
             prefer="parent's"
             register={{
-              ...register("contact-email", {
+              ...register("Contact.contact-email", {
                 required: "You must provide an email address",
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -110,7 +111,7 @@ export default function StudentForm() {
             label="contact name"
             id="contact-name"
             register={{
-              ...register("contact-name", {
+              ...register("Contact.contact-name", {
                 required: "You must provide a contact name",
               }),
             }}
@@ -203,7 +204,7 @@ export default function StudentForm() {
           <p className="error-message">{errors["number-of-months"]?.message}</p>
 
           {/* ========= Terms & conditions ========= */}
-          <div className="flex gap-2 items-start mt-6">
+          <label className="text-sm cursor-pointer flex gap-2 items-start mt-6">
             <input
               className="mt-1"
               type="checkbox"
@@ -211,14 +212,13 @@ export default function StudentForm() {
                 required: "You must accept the terms and conditions",
               })}
             />
-            <label className="text-sm cursor-pointer">
-              I accept the{" "}
-              <span className="text-[#4e5fee]">terms & conditions</span> and
-              understand my{" "}
-              <span className="text-[#4e5fee]">right of withdrawal</span> as
-              well as the circumstances that lead to a repeal of the same.
-            </label>
-          </div>
+            <span>I accept the{" "}
+            <span className="text-[#4e5fee]">terms & conditions</span> and
+            understand my{" "}
+            <span className="text-[#4e5fee]">right of withdrawal</span> as well
+            as the circumstances that lead to a repeal of the same.</span>
+          </label>
+
           <p className="error-message">{errors["terms"]?.message}</p>
 
           {/* ========= Submit ========= */}
