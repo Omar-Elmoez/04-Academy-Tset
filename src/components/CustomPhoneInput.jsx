@@ -28,7 +28,7 @@ const CustomPhoneInput = forwardRef(function CustomPhoneInput(
           </label>
           <PhoneInput
             className="react-tel-input"
-            country={"gr"}
+            country={"eg"}
             value={field.value}
             ref={ref}
             onChange={(value, country) => {

@@ -29,13 +29,13 @@ export default function StudentForm() {
 
   async function onSubmit(data) {
     // Remove the country code from the phone number
-    const modifiedStudentPhone = data["student-phone"].replace(
+    const modifiedStudentPhone = data["phoneNumbers"][0].replace(
       studentPhone.current.value,
       ""
     );
     data["student-phone"] = modifiedStudentPhone;
 
-    const modifiedParentPhone = data["parent-phone"].replace(
+    const modifiedParentPhone = data["phoneNumbers"][1].replace(
       parentPhone.current.value,
       ""
     );
@@ -66,7 +66,7 @@ export default function StudentForm() {
           <CustomPhoneInput
             control={control}
             prefer="student's"
-            name="student-phone"
+            name="phoneNumbers.0"
             ref={studentPhone}
           />
           <p className="error-message">{errors["student-phone"]?.message}</p>
@@ -75,7 +75,7 @@ export default function StudentForm() {
           <CustomPhoneInput
             control={control}
             prefer="parent's"
-            name="parent-phone"
+            name="phoneNumbers.1"
             ref={parentPhone}
           />
           <p className="error-message">{errors["parent-phone"]?.message}</p>
